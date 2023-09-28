@@ -6,7 +6,11 @@ export default function Home() {
 
   return (
     <div>
-     <span >Hover over this text to see the dynamic tooltip.</span>
+     <span onMouseOver={()=>{
+      setShowTooltip(!showTooltip)
+     }} onMouseLeave={()=>{
+      setShowTooltip(!showTooltip)
+     }}>Hover over this text to see the dynamic tooltip.</span>
       {showTooltip && <DynamicTooltip />}
     </div>
   );
